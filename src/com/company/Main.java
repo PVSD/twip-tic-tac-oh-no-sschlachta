@@ -1,5 +1,4 @@
 package com.company;
-import java.util.Random;
 import java.util.Scanner;
 
 
@@ -48,8 +47,84 @@ public class Main {
             System.out.println("  0 1 2");
             for (int i = 0; i < board.length; i++) {
                 System.out.println(i + " " + board[i][0] + " " + board[i][1] + " " + board[i][2]);
+            }
+
+            System.out.println("Cool move! Now it's my turn!");
+
+            if(board[fc][sc] != board[0][0]){
+
+                board[0][0] = compSign;
+
+            } else if(board[fc][sc] != board[0][2]){
+
+                board[0][2] = compSign;
+
+            } else if(board[fc][sc] != board[2][0]){
+
+                board[2][0] = compSign;
+
+            } else if(board[fc][sc] != board[1][1]){
+
+                board[1][1]= compSign;
+
+            } else if(board[fc][sc] != board[1][0]) {
+
+                board[1][0] = compSign;
+
+            } else if(board[fc][sc] != board[1][2]){
+
+                board[1][2] = compSign;
+
+            } else if(board[fc][sc] != board[0][1]){
+
+                board[0][1] = compSign;
+
+            } else if(board[fc][sc] != board[2][1]){
+
+                board[2][1] = compSign;
 
             }
+
+            System.out.println("  0 1 2");
+            for (int i = 0; i < board.length; i++) {
+                System.out.println(i + " " + board[i][0] + " " + board[i][1] + " " + board[i][2]);
+            }
+
+            System.out.println("Your turn again! What row would you like to place your 'X'?");
+            Scanner secMove = new Scanner(System.in);
+            int sm = secMove.nextInt();
+
+            System.out.println("And the column?");
+            Scanner secMoveCor = new Scanner(System.in);
+            int smc = secMoveCor.nextInt();
+
+            board[sm][smc] = "X";
+
+            System.out.println("  0 1 2");
+            for (int i = 0; i < board.length; i++) {
+                System.out.println(i + " " + board[i][0] + " " + board[i][1] + " " + board[i][2]);
+            }
+
+            System.out.println("My turn again!");
+
+            if(fc == sm){
+
+                board[fc][!]
+
+            } else if(sc == smc){
+
+                int myMove = sc + smc;
+                int realMove = 3 - myMove;
+                board[sc][realMove] = compSign;
+
+            }
+
+            System.out.println("  0 1 2");
+            for (int i = 0; i < board.length; i++) {
+                System.out.println(i + " " + board[i][0] + " " + board[i][1] + " " + board[i][2]);
+            }
+
+
 
         } else if (xoUser.equalsIgnoreCase("O")) {
 
@@ -68,34 +143,88 @@ public class Main {
             System.out.println("  0 1 2");
             for (int i = 0; i < board.length; i++) {
                 System.out.println(i + " " + board[i][0] + " " + board[i][1] + " " + board[i][2]);
-
             }
 
-        }
+            System.out.println("Good move! Now it's my turn!");
 
-        System.out.println("Good move! Now it's my turn!");
+           if(board[fc][sc] != board[0][0]){
 
-        Random compcor1 = new Random();
-        int firstcomp = compcor1.nextInt(3);
+               board[0][0] = compSign;
 
-        Random compcor2 = new Random();
-        int secondcomp = compcor2.nextInt(3);
+           } else if(board[fc][sc] != board[0][2]){
 
-        if(board[firstcomp][secondcomp].equalsIgnoreCase(" ")){
+               board[0][2] = compSign;
 
-            board
+           } else if(board[fc][sc] != board[2][0]){
+
+               board[2][0] = compSign;
+
+           } else if(board[fc][sc] != board[1][1]){
+
+               board[1][1]= compSign;
+
+           } else if(board[fc][sc] != board[1][0]) {
+
+               board[1][0] = compSign;
+
+           } else if(board[fc][sc] != board[1][2]){
+
+               board[1][2] = compSign;
+
+           } else if(board[fc][sc] != board[0][1]){
+
+               board[0][1] = compSign;
+
+           } else if(board[fc][sc] != board[2][1]){
+
+               board[2][1] = compSign;
+
+           }
 
             System.out.println("  0 1 2");
             for (int i = 0; i < board.length; i++) {
                 System.out.println(i + " " + board[i][0] + " " + board[i][1] + " " + board[i][2]);
-
             }
 
-        } else {
 
+            System.out.println("Your turn again! What row would you like to place your 'X'?");
+            Scanner secMove = new Scanner(System.in);
+            int sm = secMove.nextInt();
 
+            System.out.println("And the column?");
+            Scanner secMoveCor = new Scanner(System.in);
+            int smc = secMoveCor.nextInt();
+
+            board[sm][smc] = "X";
+
+            System.out.println("  0 1 2");
+            for (int i = 0; i < board.length; i++) {
+                System.out.println(i + " " + board[i][0] + " " + board[i][1] + " " + board[i][2]);
+            }
+
+            System.out.println("My turn again!");
+
+            if(fc == sm){
+
+                int myMove = fc + sm;
+                int realMove = 3 - myMove;
+                board[fc][realMove] = compSign;
+
+            } else if(sc == smc){
+
+                int myMove = sc + smc;
+                int realMove = 3 - myMove;
+                board[sc][realMove] = compSign;
+
+                }
+
+            System.out.println("  0 1 2");
+            for (int i = 0; i < board.length; i++) {
+                System.out.println(i + " " + board[i][0] + " " + board[i][1] + " " + board[i][2]);
+            }
+
+            }
 
         }
 
     }
-}
