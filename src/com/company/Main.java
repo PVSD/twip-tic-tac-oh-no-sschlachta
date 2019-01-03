@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String[][] board = new String[3][3];
+        String board[][] = new String[3][3];
 
         board[0][0] = " ";
         board[0][1] = " ";
@@ -51,39 +51,15 @@ public class Main {
 
             System.out.println("Cool move! Now it's my turn!");
 
-            if(board[fc][sc] != board[0][0]){
 
-                board[0][0] = compSign;
 
-            } else if(board[fc][sc] != board[0][2]){
+            CompMove bard = new CompMove[][];
 
-                board[0][2] = compSign;
+            board = bard.makeMove(board);
+            
 
-            } else if(board[fc][sc] != board[2][0]){
 
-                board[2][0] = compSign;
 
-            } else if(board[fc][sc] != board[1][1]){
-
-                board[1][1]= compSign;
-
-            } else if(board[fc][sc] != board[1][0]) {
-
-                board[1][0] = compSign;
-
-            } else if(board[fc][sc] != board[1][2]){
-
-                board[1][2] = compSign;
-
-            } else if(board[fc][sc] != board[0][1]){
-
-                board[0][1] = compSign;
-
-            } else if(board[fc][sc] != board[2][1]){
-
-                board[2][1] = compSign;
-
-            }
 
             System.out.println("  0 1 2");
             for (int i = 0; i < board.length; i++) {
@@ -107,17 +83,6 @@ public class Main {
 
             System.out.println("My turn again!");
 
-            if(fc == sm){
-
-                board[fc][!]
-
-            } else if(sc == smc){
-
-                int myMove = sc + smc;
-                int realMove = 3 - myMove;
-                board[sc][realMove] = compSign;
-
-            }
 
             System.out.println("  0 1 2");
             for (int i = 0; i < board.length; i++) {
@@ -147,35 +112,35 @@ public class Main {
 
             System.out.println("Good move! Now it's my turn!");
 
-           if(board[fc][sc] != board[0][0]){
+           if(board[0][0]==" "){
 
                board[0][0] = compSign;
 
-           } else if(board[fc][sc] != board[0][2]){
+           } else if(board[0][2]==" "){
 
                board[0][2] = compSign;
 
-           } else if(board[fc][sc] != board[2][0]){
+           } else if(board[2][0]==" "){
 
                board[2][0] = compSign;
 
-           } else if(board[fc][sc] != board[1][1]){
+           } else if(board[1][1]==" "){
 
                board[1][1]= compSign;
 
-           } else if(board[fc][sc] != board[1][0]) {
+           } else if(board[1][0]==" ") {
 
                board[1][0] = compSign;
 
-           } else if(board[fc][sc] != board[1][2]){
+           } else if(board[1][2]==" "){
 
                board[1][2] = compSign;
 
-           } else if(board[fc][sc] != board[0][1]){
+           } else if(board[0][1]==" "){
 
                board[0][1] = compSign;
 
-           } else if(board[fc][sc] != board[2][1]){
+           } else if(board[2][1]==" "){
 
                board[2][1] = compSign;
 
